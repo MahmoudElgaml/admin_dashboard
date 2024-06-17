@@ -1,14 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:res_adap/generated/assets.dart';
 import 'package:res_adap/model/all_expensive_item_model.dart';
-import 'package:res_adap/utils/styles.dart';
 import 'package:res_adap/widgets/all_expensive_widgets/all_expensive_item.dart';
 
 import 'all_expensive_header.dart';
 
-class AllExpensiveBody extends StatelessWidget {
- const AllExpensiveBody({super.key});
+class AllExpensiveBody extends StatefulWidget {
+  AllExpensiveBody({super.key});
 
   static const List<AllExpensiveItemModel> items = [
     AllExpensiveItemModel(
@@ -29,6 +27,13 @@ class AllExpensiveBody extends StatelessWidget {
   ];
 
   @override
+  State<AllExpensiveBody> createState() => _AllExpensiveBodyState();
+}
+
+class _AllExpensiveBodyState extends State<AllExpensiveBody> {
+  int selectedIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -40,12 +45,37 @@ class AllExpensiveBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const AllExpensiveHeader(),
-          const SizedBox(height: 16,),
-          Row(
-            children: items.map((e) => Expanded(child: AllExpensiveItem(itemModel: e))).toList()
+          const SizedBox(
+            height: 16,
           ),
+          Row(
+              children: AllExpensiveBody.items.asMap().entries.map((e) {
+            return Expanded(
+              child: Padding(
+                padding:
+                    e.key == 1 ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
+                child: e.key == selectedIndex
+                    ? InkWell(
+                        onTap: () {
+                          ChangeIndex(e.key);
+                        },
+                        child: AllExpensiveItemActive(itemModel: e.value))
+                    : InkWell(
+                    onTap:() {
+                      ChangeIndex(e.key);
+                    },
+                    child: AllExpensiveItemInActive(itemModel: e.value)),
+              ),
+            );
+          }).toList()),
         ],
       ),
     );
+  }
+
+  ChangeIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
