@@ -10,25 +10,23 @@ class DrawerBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Column(
-        children: [
-          UserInfo(),
-          SizedBox(
-            height: 8,
-          ),
-          DrawerItemList(),
-          Spacer(),
-          DrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesSetting, title: "Setting system"),
-          ),
-          DrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesLogout, title: "Logout account"),
-          ),
-        ],
-      ),
+    return const Column(
+      children: [
+        UserInfo(),
+        SizedBox(
+          height: 8,
+        ),
+        DrawerItemList(),
+        Spacer(),
+        DrawerItem(
+          drawerItemModel: DrawerItemModel(
+              image: Assets.imagesSetting, title: "Setting system"),
+        ),
+        DrawerItem(
+          drawerItemModel: DrawerItemModel(
+              image: Assets.imagesLogout, title: "Logout account"),
+        ),
+      ],
     );
   }
 }
