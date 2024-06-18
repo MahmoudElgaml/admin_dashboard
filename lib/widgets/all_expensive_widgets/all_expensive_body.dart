@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:res_adap/generated/assets.dart';
 import 'package:res_adap/model/all_expensive_item_model.dart';
 import 'package:res_adap/widgets/all_expensive_widgets/all_expensive_item.dart';
+import 'package:res_adap/widgets/custome_contanier.dart';
 
 import 'all_expensive_header.dart';
 
@@ -35,40 +36,39 @@ class _AllExpensiveBodyState extends State<AllExpensiveBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const AllExpensiveHeader(),
-          const SizedBox(
-            height: 16,
-          ),
-          Row(
-              children: AllExpensiveBody.items.asMap().entries.map((e) {
-            return Expanded(
-              child: Padding(
-                padding:
-                    e.key == 1 ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
-                child: e.key == selectedIndex
-                    ? InkWell(
-                        onTap: () {
-                          ChangeIndex(e.key);
-                        },
-                        child: AllExpensiveItemActive(itemModel: e.value))
-                    : InkWell(
-                    onTap:() {
-                      ChangeIndex(e.key);
-                    },
-                    child: AllExpensiveItemInActive(itemModel: e.value)),
-              ),
-            );
-          }).toList()),
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: CostumeContainer(
+        padding: 20,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const AllExpensiveHeader(),
+            const SizedBox(
+              height: 16,
+            ),
+            Row(
+                children: AllExpensiveBody.items.asMap().entries.map((e) {
+              return Expanded(
+                child: Padding(
+                  padding:
+                      e.key == 1 ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
+                  child: e.key == selectedIndex
+                      ? InkWell(
+                          onTap: () {
+                            ChangeIndex(e.key);
+                          },
+                          child: AllExpensiveItemActive(itemModel: e.value))
+                      : InkWell(
+                          onTap: () {
+                            ChangeIndex(e.key);
+                          },
+                          child: AllExpensiveItemInActive(itemModel: e.value)),
+                ),
+              );
+            }).toList()),
+          ],
+        ),
       ),
     );
   }

@@ -9,16 +9,19 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-      children: [
-        Expanded(
-          child: DrawerBody(),
-        ),
-        Expanded(
-          flex: 2,
-          child: AllExpensiveBody(),
-        )
-      ],
+    return  Container(
+      color:Colors.white60,
+      child: Row(
+        children: [
+          const Expanded(
+            child: DrawerBody(),
+          ),
+          Expanded(
+            flex: 3,
+            child: AllExpensiveBody(),
+          )
+        ],
+      ),
     );
   }
 }
