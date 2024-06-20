@@ -3,6 +3,8 @@ import 'package:res_adap/widgets/custome_contanier.dart';
 import 'package:res_adap/widgets/quick_invoice_widgets/latest_transaction.dart';
 import 'package:res_adap/widgets/quick_invoice_widgets/quickinvoice_header.dart';
 
+import 'information_section.dart';
+
 class QuickInvoiceBody extends StatelessWidget {
   const QuickInvoiceBody({super.key});
 
@@ -18,7 +20,8 @@ class QuickInvoiceBody extends StatelessWidget {
            QuickInvoiceHeader(),
             SizedBox(height: 24,),
             LatestTransaction(),
-
+            SizedBox(height:40,),
+            InformationSection(),
 
 
 

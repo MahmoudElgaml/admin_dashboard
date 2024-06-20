@@ -52,7 +52,7 @@ class _AllExpensiveBodyState extends State<AllExpensiveBody> {
               return Expanded(
                 child: Padding(
                   padding:
-                      e.key == 1 ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
+                      e.key == 1 ? const EdgeInsets.symmetric(horizontal: 8) : EdgeInsets.zero,
                   child: e.key == selectedIndex
                       ? InkWell(
                           onTap: () {

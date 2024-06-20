@@ -75,7 +75,7 @@ class AllExpensiveItemActive extends StatelessWidget {
               image: itemModel.image,
             ),
             const SizedBox(
-              height: 34,
+              height: 30,
             ),
             Text(
               itemModel.title,

@@ -1,14 +1,34 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:res_adap/utils/styles.dart';
 
 class CostumeTitleTextFiled extends StatelessWidget {
-  const CostumeTitleTextFiled({super.key});
-
+  const CostumeTitleTextFiled({super.key,required this.title,required this.hint});
+final  String hint;
+final String title;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Customer name",style: AppStyle.styleMedium16,),
+        Text(
+          title,
+          style: AppStyle.styleMedium16,
+        ),
+        SizedBox(height: 12,),
+        TextField(
+          decoration: InputDecoration(
+              hintStyle: AppStyle.styleRegular16,
+              hintText: hint,
+              fillColor: const Color(0xFFFAFAFA),
+              filled: true,
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  color: Color(0xFFFAFAFA),
+                ),
+                borderRadius: BorderRadius.circular(12),
+              )),
+        )
       ],
     );
   }

@@ -19,11 +19,13 @@ class DesktopLayout extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: Column(
-              children: [
-                AllExpensiveBody(),
-                const QuickInvoiceBody(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AllExpensiveBody(),
+                  const QuickInvoiceBody(),
+                ],
+              ),
             ),
           ),
           const Expanded(
