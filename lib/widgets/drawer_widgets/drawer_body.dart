@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:res_adap/generated/assets.dart';
 import 'package:res_adap/model/drawer_item_model.dart';
+import 'package:res_adap/model/user_info_model.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_item.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_item_list.dart';
 import 'package:res_adap/widgets/drawer_widgets/user_info.dart';
@@ -14,7 +15,12 @@ class DrawerBody extends StatelessWidget {
       color: Colors.white,
       child: const Column(
         children: [
-          UserInfo(),
+          UserInfo(
+            user: UserModel(
+                name: "Madrani Andi",
+                email: "Madraniadi20@gmail",
+                image: Assets.imagesAvatar2),
+          ),
           SizedBox(
             height: 8,
           ),

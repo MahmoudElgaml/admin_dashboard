@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:res_adap/widgets/custome_contanier.dart';
+import 'package:res_adap/widgets/quick_invoice_widgets/latest_transaction.dart';
 import 'package:res_adap/widgets/quick_invoice_widgets/quickinvoice_header.dart';
 
 class QuickInvoiceBody extends StatelessWidget {
@@ -12,8 +13,14 @@ class QuickInvoiceBody extends StatelessWidget {
       child: CostumeContainer(
         padding: 24,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           QuickInvoiceHeader()
+           QuickInvoiceHeader(),
+            SizedBox(height: 24,),
+            LatestTransaction(),
+
+
+
 
           ],
         ),

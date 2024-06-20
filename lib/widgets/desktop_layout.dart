@@ -25,7 +25,11 @@ class DesktopLayout extends StatelessWidget {
                 const QuickInvoiceBody(),
               ],
             ),
-          )
+          ),
+          const Expanded(
+            flex: 1,
+            child: SizedBox(),
+          ),
         ],
       ),
     );
