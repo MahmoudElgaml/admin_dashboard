@@ -19,9 +19,12 @@ class MyCardBody extends StatelessWidget {
             style: AppStyle.styleSemiBold20,
           ),
           SizedBox(height: 20,),
-          TheCard(
-            card:
-                CardModel(name: "fafsa", cardNumber: "fadf", expireDate: "sfa"),
+          SizedBox(
+            width: double.infinity,
+            child: TheCard(
+              card:
+                  CardModel(name: "fafsa", cardNumber: "fadf", expireDate: "sfa"),
+            ),
           ),
         ],
       ),

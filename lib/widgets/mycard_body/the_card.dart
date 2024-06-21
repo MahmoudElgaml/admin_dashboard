@@ -13,64 +13,70 @@ class TheCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: const Color(0xff5fbef3),
-      ),
-      child: Stack(
-        children: [
-          SvgPicture.asset(Assets.imagesCard),
-          Positioned.fill(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 31),
-                  child: RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "card Name\n",
-                          style: AppStyle.styleRegular16.copyWith(
-                            color: Colors.white,
-                          ),
-                        ),
-                        const TextSpan(
-                          text: "Syah Bandi",
-                          style: AppStyle.styleMedium20,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 24, bottom: 27),
+    return AspectRatio(
+      aspectRatio: 420/215,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: const Color(0xff5fbef3),
+        ),
+        child: Stack(
+          children: [
+            SvgPicture.asset(Assets.imagesCard),
+            Positioned.fill(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20, left: 31),
                     child: RichText(
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: "0918 8124 0042 8129\n",
-                            style: AppStyle.styleSemiBold24.copyWith(
+                            text: "card Name\n",
+                            style: AppStyle.styleRegular16.copyWith(
                               color: Colors.white,
                             ),
                           ),
                           const TextSpan(
-                            text: "12/20 - 124",
-                            style: AppStyle.styleRegular16,
+                            text: "Syah Bandi",
+                            style: AppStyle.styleMedium20,
                           ),
                         ],
                       ),
                     ),
                   ),
-                ),
-              ],
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 24, bottom: 27),
+                      child: RichText(
+                        textAlign: TextAlign.end,
+                        text: TextSpan(
+      
+                          children: [
+                            TextSpan(
+                              text: "0918 8124 0042 8129\n",
+                              style: AppStyle.styleSemiBold24.copyWith(
+                                color: Colors.white,
+                              ),
+                            ),
+      
+                            const TextSpan(
+                              text: "12/20 - 124",
+                              style: AppStyle.styleRegular16,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
