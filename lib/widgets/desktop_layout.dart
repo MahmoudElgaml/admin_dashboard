@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:res_adap/widgets/all_expensive_widgets/all_expensive_body.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_body.dart';
+import 'package:res_adap/widgets/mycard_body/my_card_body.dart';
 import 'package:res_adap/widgets/quick_invoice_widgets/quick_invoice_body.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -29,8 +30,8 @@ class DesktopLayout extends StatelessWidget {
             ),
           ),
           const Expanded(
-            flex: 1,
-            child: SizedBox(),
+            flex: 2,
+            child: MyCardBody(),
           ),
         ],
       ),

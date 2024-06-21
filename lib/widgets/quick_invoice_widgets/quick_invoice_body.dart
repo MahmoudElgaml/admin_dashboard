@@ -30,7 +30,7 @@ class QuickInvoiceBody extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            ButtonSection()
+            ButtonSection(),
           ],
         ),
       ),
