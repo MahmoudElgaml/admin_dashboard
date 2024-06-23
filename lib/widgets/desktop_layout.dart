@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:res_adap/widgets/all_expensive_widgets/all_expensive_body.dart';
 import 'package:res_adap/widgets/custome_contanier.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_body.dart';
+import 'package:res_adap/widgets/my_card_section.dart';
 import 'package:res_adap/widgets/mycard_body/my_card_body.dart';
 import 'package:res_adap/widgets/quick_invoice_widgets/quick_invoice_body.dart';
 import 'package:res_adap/widgets/transaction_history/transaction_history_body.dart';
@@ -33,15 +34,10 @@ class DesktopLayout extends StatelessWidget {
           ),
           const Expanded(
             flex: 2,
-            child: CostumeContainer(
-              padding: 24,
-              child: Column(
-                children: [
-                  MyCardBody(),
-                  Divider(color: Color(0xffF1F1F1),),
-                  TransactionHistoryBody()
-                ],
-              ),
+            child: Column(
+              children: [
+               MyCardSection()
+              ],
             ),
           ),
         ],
