@@ -9,6 +9,7 @@ final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView.builder(
+
       controller:pageController ,
       itemCount: 3,
       itemBuilder: (context, index) => TheCard(

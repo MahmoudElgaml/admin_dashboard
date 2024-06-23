@@ -7,24 +7,43 @@ import 'package:res_adap/widgets/drawer_widgets/user_info.dart';
 
 class LatestTransaction extends StatelessWidget {
   const LatestTransaction({super.key});
- static const List<UserModel> items=[
-   UserModel(name: "Madrani Andi", email: "Madraniadi20@gmail", image: Assets.imagesAvatar2),
-   UserModel(name: "Madrani Andi", email: "Madraniadi20@gmail", image: Assets.imagesAvatar3),
-   UserModel(name: "Madrani Andi", email: "Madraniadi20@gmail", image: Assets.imagesAvatar4),
- ];
+
+  static const List<UserModel> items = [
+    UserModel(
+        name: "Madrani Andi",
+        email: "Madraniadi20@gmail",
+        image: Assets.imagesAvatar2),
+    UserModel(
+        name: "Madrani Andi",
+        email: "Madraniadi20@gmail",
+        image: Assets.imagesAvatar3),
+    UserModel(
+        name: "Madrani Andi",
+        email: "Madraniadi20@gmail",
+        image: Assets.imagesAvatar4),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Latest Transaction",style: AppStyle.styleMedium16.copyWith(color: Colors.black),),
+        Text(
+          "Latest Transaction",
+          style: AppStyle.styleMedium16.copyWith(color: Colors.black),
+        ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: items.map((e) => IntrinsicWidth(child: Padding(
-              padding: const EdgeInsets.all(12),
-              child: UserInfo(user: e,),
-            ))).toList(),
+            children: items
+                .map((e) => IntrinsicWidth(
+                        child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: UserInfo(
+                        user: e,
+                      ),
+                    )))
+                .toList(),
           ),
         )
       ],

@@ -35,24 +35,21 @@ class _MyCardBodyState extends State<MyCardBody> {
   }
   @override
   Widget build(BuildContext context) {
-    return CostumeContainer(
-      padding: 24,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "My card",
-            style: AppStyle.styleSemiBold20,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          CardPageView(pageController: pageController,),
-          SizedBox(height: 20,),
-          DotIndicatorList(currentIndex: currentIndex)
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "My card",
+          style: AppStyle.styleSemiBold20,
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        CardPageView(pageController: pageController,),
+        SizedBox(height: 20,),
+        DotIndicatorList(currentIndex: currentIndex)
 
-        ],
-      ),
+      ],
     );
   }
 }

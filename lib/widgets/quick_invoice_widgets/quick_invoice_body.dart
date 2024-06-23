@@ -12,7 +12,7 @@ class QuickInvoiceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20, right: 20),
       child: CostumeContainer(
         padding: 24,
         child: Column(
