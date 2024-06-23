@@ -22,7 +22,7 @@ class TheCard extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            SvgPicture.asset(Assets.imagesCard),
+            Image.asset(Assets.imagesCard),
             Positioned.fill(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:res_adap/model/card_model.dart';
 import 'package:res_adap/utils/styles.dart';
 import 'package:res_adap/widgets/custome_contanier.dart';
+import 'package:res_adap/widgets/mycard_body/card_pageview.dart';
 import 'package:res_adap/widgets/mycard_body/the_card.dart';
 
 class MyCardBody extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyCardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CostumeContainer(
+    return const CostumeContainer(
       padding: 24,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,13 +20,7 @@ class MyCardBody extends StatelessWidget {
             style: AppStyle.styleSemiBold20,
           ),
           SizedBox(height: 20,),
-          SizedBox(
-            width: double.infinity,
-            child: TheCard(
-              card:
-                  CardModel(name: "fafsa", cardNumber: "fadf", expireDate: "sfa"),
-            ),
-          ),
+          CardPageView()
         ],
       ),
     );

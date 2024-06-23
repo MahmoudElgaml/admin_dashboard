@@ -2,11 +2,12 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesCard = 'assets/images/card.svg';
   static const String imagesAvatar2 = 'assets/images/avatar_2.svg';
   static const String imagesAvatar3 = 'assets/images/avatar_3.svg';
   static const String imagesAvatar4 = 'assets/images/avatar_4.svg';
   static const String imagesBallance = 'assets/images/ballance.svg';
-  static const String imagesCard = 'assets/images/card.svg';
+  static const String imagesCard = 'assets/images/card.png';
   static const String imagesDashboard = 'assets/images/dashboard.svg';
   static const String imagesExpenses = 'assets/images/expenses.svg';
   static const String imagesFrame = 'assets/images/Frame.svg';
