@@ -9,17 +9,17 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Expanded(
-      child: CostumeContainer(
-        padding: 24,
-        child: Column(
-          children: [
-            MyCardBody(),
-            Divider(color: Color(0xffF1F1F1),
-              height: 40,),
-            Expanded(child: TransactionHistoryBody())
-          ],
-        ),
+    return CostumeContainer(
+      padding: 24,
+      child: Column(
+        children: [
+          MyCardBody(),
+          Divider(
+            color: Color(0xffF1F1F1),
+            height: 40,
+          ),
+          TransactionHistoryBody()
+        ],
       ),
     );
   }

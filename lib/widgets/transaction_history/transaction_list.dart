@@ -24,7 +24,8 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return  Expanded(
+    return  SizedBox(
+      height: 200,
       child: ListView.builder(
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.only(bottom: 12),
