@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_body.dart';
 import 'package:res_adap/widgets/income_section/income_section_body.dart';
 import 'package:res_adap/widgets/middle_wiget.dart';
+import 'package:res_adap/widgets/mobile_layout.dart';
 import 'package:res_adap/widgets/my_card_section.dart';
 import 'package:res_adap/widgets/mycard_body/dotindicator_list.dart';
 
@@ -18,17 +19,9 @@ class TabletLayout extends StatelessWidget {
       children: [
         Expanded(child: DrawerBody()),
         Expanded(
-            flex: 3,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  MiddleWidget(),
-                 MyCardSection(),
-                 IncomeSectionBody()
-
-                ],
-              ),
-            ))
+          flex: 3,
+          child: MobileLayout()
+        )
       ],
     );
   }

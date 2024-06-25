@@ -14,7 +14,7 @@ class TheCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420/215,
+      aspectRatio: 420 / 215,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
@@ -22,7 +22,12 @@ class TheCard extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            Image.asset(Assets.imagesCard),
+            Image.asset(
+              Assets.imagesCard,
+              fit: BoxFit.fill,
+              width: double.infinity,
+              height: double.infinity,
+            ),
             Positioned.fill(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +59,6 @@ class TheCard extends StatelessWidget {
                       child: RichText(
                         textAlign: TextAlign.end,
                         text: TextSpan(
-      
                           children: [
                             TextSpan(
                               text: "0918 8124 0042 8129\n",
@@ -62,7 +66,6 @@ class TheCard extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-      
                             const TextSpan(
                               text: "12/20 - 124",
                               style: AppStyle.styleRegular16,
