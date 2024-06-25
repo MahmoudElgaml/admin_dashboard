@@ -8,17 +8,12 @@ class RightWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 2,
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            MyCardSection(),
-            SizedBox(height: 24,),
-            IncomeSectionBody(),
-          ],
-        ),
-      ),
+    return Column(
+      children: [
+        MyCardSection(),
+        SizedBox(height: 24,),
+        IncomeSectionBody(),
+      ],
     );
   }
 }

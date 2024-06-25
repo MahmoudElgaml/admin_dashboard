@@ -7,16 +7,11 @@ class MiddleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      flex: 3,
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            AllExpensiveBody(),
-            const QuickInvoiceBody(),
-          ],
-        ),
-      ),
+    return  Column(
+      children: [
+        AllExpensiveBody(),
+        const QuickInvoiceBody(),
+      ],
     );
   }
 }
