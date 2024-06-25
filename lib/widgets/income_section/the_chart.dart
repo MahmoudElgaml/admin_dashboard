@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:res_adap/widgets/income_section/income_details.dart';
 
 class TheChart extends StatefulWidget {
   const TheChart({super.key});
@@ -17,10 +18,17 @@ class _TheChartState extends State<TheChart> {
       child: Row(
         children: [
           Expanded(
-            child: PieChart(
-              getPieChartData(),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: PieChart(
+                getPieChartData(),
+              ),
             ),
           ),
+          SizedBox(width: 20,),
+          Expanded(
+            child: IncomeDetails(),
+          )
         ],
       ),
     );

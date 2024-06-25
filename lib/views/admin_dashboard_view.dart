@@ -7,7 +7,7 @@ class AdminDashBoardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: AdaptiveLayout(
           desktop: (context) => const DesktopLayout(),
           mobile: (context) => const SizedBox(),
