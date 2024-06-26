@@ -5,18 +5,21 @@ import 'package:res_adap/widgets/desktop_layout.dart';
 import 'package:res_adap/widgets/drawer_widgets/drawer_body.dart';
 import 'package:res_adap/widgets/mobile_layout.dart';
 
-class AdminDashBoardView extends StatelessWidget {
+class AdminDashBoardView extends StatefulWidget {
   const AdminDashBoardView({super.key});
 
   @override
+  State<AdminDashBoardView> createState() => _AdminDashBoardViewState();
+}
+
+class _AdminDashBoardViewState extends State<AdminDashBoardView> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
+  @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
     return Scaffold(
-      drawer: MediaQuery.sizeOf(context).width < 800
-          ? const Drawer(
-              child: DrawerBody(),
-            )
-          : null,
+      drawer:
+          MediaQuery.sizeOf(context).width < 800 ? const DrawerBody() : null,
       key: scaffoldKey,
       appBar: MediaQuery.sizeOf(context).width < 800
           ? AppBar(
