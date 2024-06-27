@@ -24,9 +24,30 @@ class DesktopLayout extends StatelessWidget {
           Expanded(
             child: DrawerBody(),
           ),
-          Expanded(
-              flex: 3, child: SingleChildScrollView(child: MiddleWidget())),
-          Expanded(flex: 2, child: SingleChildScrollView(child: RightWidget()))
+         Expanded(
+           flex: 5,
+           child: CustomScrollView(
+              scrollDirection: Axis.vertical,
+             slivers: [
+               SliverFillRemaining(
+             hasScrollBody: false,
+                 child:   Row(
+                   children: [
+                     Expanded(
+                       flex: 3,
+                       child: MiddleWidget(),
+                     ),
+                     Expanded(
+                       flex: 2,
+                       child: RightWidget(),
+                     )
+                   ],
+                 ),
+               )
+             ],
+
+           ),
+         )
         ],
       ),
     );

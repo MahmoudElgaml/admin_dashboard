@@ -14,23 +14,23 @@ class _TheChartState extends State<TheChart> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        children: [
-          Expanded(
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: PieChart(
-                getPieChartData(),
-              ),
+    return Row(
+      children: [
+        Expanded(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: PieChart(
+              getPieChartData(),
             ),
           ),
-          SizedBox(width: 20,),
-          Expanded(
-            child: IncomeDetails(),
-          )
-        ],
-      ),
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+        const Expanded(
+          child: IncomeDetails(),
+        )
+      ],
     );
   }
 

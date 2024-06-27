@@ -11,17 +11,15 @@ class IncomeSectionBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .3,
-      child: CostumeContainer(
-        padding: 12,
-        child: const Column(
-          children: [
-            IncomeHeader(),
-            SizedBox(height: 16,),
-            TheChart()
-          ],
-        ),
+    return const CostumeContainer(
+      padding: 12,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          IncomeHeader(),
+          SizedBox(height: 16,),
+          TheChart()
+        ],
       ),
     );
   }

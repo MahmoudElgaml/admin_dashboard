@@ -4,6 +4,7 @@ import 'package:res_adap/widgets/transaction_history/costume_transaction.dart';
 
 class TransactionList extends StatelessWidget {
   const TransactionList({super.key});
+
   static const List<TransactionModel> transactionList = [
     TransactionModel(
       title: "Cash Withdrawal",
@@ -21,18 +22,26 @@ class TransactionList extends StatelessWidget {
       transactionAmount: "20,129",
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: transactionList.map((e) =>
+          CostumeTransaction(transactionModel: e),).toList(
 
-    return  SizedBox(
+      ),
+    );
+    return SizedBox(
       height: 200,
       child: ListView.builder(
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: CostumeTransaction(
-            transactionModel: transactionList[index],
-          ),
-        ),
+
+        itemBuilder: (context, index) =>
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: CostumeTransaction(
+                transactionModel: transactionList[index],
+              ),
+            ),
         itemCount: transactionList.length,
       ),
     );
