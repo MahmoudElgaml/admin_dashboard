@@ -16,7 +16,7 @@ class DrawerItem extends StatelessWidget {
         leading: SvgPicture.asset(drawerItemModel.image),
         title: Text(
           drawerItemModel.title,
-          style: AppStyle.styleRegular16,
+          style: AppStyle.styleRegular16(context),
         ),
       ),
     );

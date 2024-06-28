@@ -19,16 +19,16 @@ class CostumeTransaction extends StatelessWidget {
         child: ListTile(
           title: Text(
             transactionModel.title,
-            style: AppStyle.styleSemiBold16,
+            style: AppStyle.styleSemiBold16(context),
           ),
           subtitle: Text(
             transactionModel.date,
             style:
-                AppStyle.styleMedium16.copyWith(color: const Color(0xffAAAAAA)),
+                AppStyle.styleMedium16(context).copyWith(color: const Color(0xffAAAAAA)),
           ),
           trailing: Text(
             transactionModel.transactionAmount,
-            style: AppStyle.styleSemiBold20
+            style: AppStyle.styleSemiBold20(context)
                 .copyWith(color: const Color(0xff7DD97B)),
           ),
         ),

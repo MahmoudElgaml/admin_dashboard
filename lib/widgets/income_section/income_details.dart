@@ -30,12 +30,17 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Column(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: items.map((e) => IncomeDetailItem(item: e,)).toList(),
+      children: items
+          .map((e) => IncomeDetailItem(
+                item: e,
+              ))
+          .toList(),
     );
     return ListView.builder(
-    //  shrinkWrap: true,
+      //  shrinkWrap: true,
       itemCount: items.length,
       itemBuilder: (context, index) => IncomeDetailItem(
         item: items[index],
@@ -58,16 +63,16 @@ class IncomeDetailItem extends StatelessWidget {
         height: 12,
         decoration: ShapeDecoration(
           color: item.color,
-          shape: OvalBorder(),
+          shape: const OvalBorder(),
         ),
       ),
       title: Text(
         item.title,
-        style: AppStyle.styleRegular16,
+        style: AppStyle.styleRegular16(context),
       ),
       trailing: Text(
         item.value,
-        style: AppStyle.styleMedium16,
+        style: AppStyle.styleMedium16(context),
       ),
     );
   }

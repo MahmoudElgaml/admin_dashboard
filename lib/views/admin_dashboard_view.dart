@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:res_adap/utils/size_config.dart';
 import 'package:res_adap/views/tablet_layout.dart';
 import 'package:res_adap/widgets/adabtive_layout.dart';
 import 'package:res_adap/widgets/desktop_layout.dart';
@@ -19,9 +20,9 @@ class _AdminDashBoardViewState extends State<AdminDashBoardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer:
-          MediaQuery.sizeOf(context).width < 800 ? const DrawerBody() : null,
+          MediaQuery.sizeOf(context).width < SizeConfig.tablet ? const DrawerBody() : null,
       key: scaffoldKey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               leading: IconButton(
                 onPressed: () {

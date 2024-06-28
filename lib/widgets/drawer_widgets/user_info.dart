@@ -21,11 +21,11 @@ class UserInfo extends StatelessWidget {
         leading: SvgPicture.asset(user.image),
         title: Text(
           user.name,
-          style: AppStyle.styleSemiBold16,
+          style: AppStyle.styleSemiBold16(context),
         ),
         subtitle: Text(
           user.email,
-          style: AppStyle.styleRegular12,
+          style: AppStyle.styleRegular12(context),
         ),
       ),
     );

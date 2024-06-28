@@ -13,12 +13,12 @@ final String title;
       children: [
         Text(
           title,
-          style: AppStyle.styleMedium16,
+          style: AppStyle.styleMedium16(context),
         ),
         SizedBox(height: 12,),
         TextField(
           decoration: InputDecoration(
-              hintStyle: AppStyle.styleRegular16,
+              hintStyle: AppStyle.styleRegular16(context),
               hintText: hint,
               fillColor: const Color(0xFFFAFAFA),
               filled: true,

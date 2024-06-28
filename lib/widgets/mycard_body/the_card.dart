@@ -40,13 +40,13 @@ class TheCard extends StatelessWidget {
                         children: [
                           TextSpan(
                             text: "card Name\n",
-                            style: AppStyle.styleRegular16.copyWith(
+                            style: AppStyle.styleRegular16(context).copyWith(
                               color: Colors.white,
                             ),
                           ),
-                          const TextSpan(
+                           TextSpan(
                             text: "Syah Bandi",
-                            style: AppStyle.styleMedium20,
+                            style: AppStyle.styleMedium20(context),
                           ),
                         ],
                       ),
@@ -62,13 +62,13 @@ class TheCard extends StatelessWidget {
                           children: [
                             TextSpan(
                               text: "0918 8124 0042 8129\n",
-                              style: AppStyle.styleSemiBold24.copyWith(
+                              style: AppStyle.styleSemiBold24(context).copyWith(
                                 color: Colors.white,
                               ),
                             ),
-                            const TextSpan(
+                             TextSpan(
                               text: "12/20 - 124",
-                              style: AppStyle.styleRegular16,
+                              style: AppStyle.styleRegular16(context),
                             ),
                           ],
                         ),

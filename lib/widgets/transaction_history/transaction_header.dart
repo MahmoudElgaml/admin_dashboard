@@ -8,15 +8,15 @@ class TransactionHistoryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
 
-      title: const Text(
+      title:  Text(
         "Transaction History",
-        style: AppStyle.styleSemiBold20,
+        style: AppStyle.styleSemiBold20(context),
       ),
       trailing: TextButton(
         onPressed: () {},
-        child: const Text(
+        child:  Text(
           "see all",
-          style: AppStyle.styleMedium16,
+          style: AppStyle.styleMedium16(context),
         ),
       ),
     );

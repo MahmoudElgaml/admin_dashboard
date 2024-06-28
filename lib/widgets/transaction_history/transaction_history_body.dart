@@ -20,7 +20,7 @@ class TransactionHistoryBody extends StatelessWidget {
         const TransactionHistoryHeader(),
         Text(
           "13 April 2022",
-          style: AppStyle.styleMedium16.copyWith(
+          style: AppStyle.styleMedium16(context).copyWith(
             color: Colors.white,
           ),
         ),

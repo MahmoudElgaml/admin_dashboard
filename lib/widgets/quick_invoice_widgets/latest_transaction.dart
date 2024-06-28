@@ -30,7 +30,7 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text(
           "Latest Transaction",
-          style: AppStyle.styleMedium16.copyWith(color: Colors.black),
+          style: AppStyle.styleMedium16(context).copyWith(color: Colors.black),
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,

@@ -8,9 +8,9 @@ class AllExpensiveHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+       Text(
           "All Expenses",
-          style: AppStyle.styleSemiBold20,
+          style: AppStyle.styleSemiBold20(context),
         ),
         const Spacer(),
         Container(
@@ -26,7 +26,7 @@ class AllExpensiveHeader extends StatelessWidget {
             children: [
               Text(
                 "Monthly",
-                style: AppStyle.styleMedium16.copyWith(
+                style: AppStyle.styleMedium16(context).copyWith(
                   color: Colors.black,
                 ),
               ),

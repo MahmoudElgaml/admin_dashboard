@@ -15,7 +15,7 @@ class ButtonSection extends StatelessWidget {
             onPressed: () {},
             child: Text(
               "Add more detail",
-              style: AppStyle.styleSemiBold16.copyWith(
+              style: AppStyle.styleSemiBold16(context).copyWith(
                 color: Color(0xff4EB7F2),
               ),
             ),
@@ -33,7 +33,7 @@ class ButtonSection extends StatelessWidget {
                   elevation: 0),
               child: Text(
                 "Send Money",
-                style: AppStyle.styleSemiBold16.copyWith(color: Colors.white),
+                style: AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
               ),
             ),
           ),
