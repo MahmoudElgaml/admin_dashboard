@@ -17,6 +17,7 @@ class CostumeTransaction extends StatelessWidget {
           color: const Color(0xffFAFAFA),
         ),
         child: ListTile(
+
           title: Text(
             transactionModel.title,
             style: AppStyle.styleSemiBold16(context),

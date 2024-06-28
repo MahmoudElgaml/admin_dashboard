@@ -14,9 +14,13 @@ class DrawerItem extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.image),
-        title: Text(
-          drawerItemModel.title,
-          style: AppStyle.styleRegular16(context),
+        title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            drawerItemModel.title,
+            style: AppStyle.styleRegular16(context),
+          ),
         ),
       ),
     );

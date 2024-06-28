@@ -18,14 +18,21 @@ class UserInfo extends StatelessWidget {
         borderRadius: BorderRadius.circular(8)
       ),
       child: ListTile(
+        contentPadding: EdgeInsets.zero,
         leading: SvgPicture.asset(user.image),
-        title: Text(
-          user.name,
-          style: AppStyle.styleSemiBold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            user.name,
+            style: AppStyle.styleSemiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          user.email,
-          style: AppStyle.styleRegular12(context),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            user.email,
+            style: AppStyle.styleRegular12(context),
+          ),
         ),
       ),
     );

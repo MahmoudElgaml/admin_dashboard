@@ -93,9 +93,9 @@ class AppStyle {
   }
 
   static double scaleFactor(double width) {
-    if (width < SizeConfig.tablet) {
+    if (width <= SizeConfig.tablet) {
       return width / 800;
-    } else if (width > SizeConfig.desktop) {
+    } else if (width >= SizeConfig.desktop) {
       return width / 1500;
     } else {
       return width / 700;

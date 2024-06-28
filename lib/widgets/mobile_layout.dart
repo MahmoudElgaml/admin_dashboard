@@ -13,8 +13,14 @@ class MobileLayout extends StatelessWidget {
       child: Column(
         children: [
           MiddleWidget(),
-          MyCardSection(),
-          IncomeSectionBody(),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: MyCardSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: IncomeSectionBody(),
+          ),
         ],
       ),
     );
