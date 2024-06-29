@@ -50,21 +50,17 @@ class _AllExpensiveBodyState extends State<AllExpensiveBody> {
             Row(
                 children: AllExpensiveBody.items.asMap().entries.map((e) {
               return Expanded(
-                child: Padding(
-                  padding:
-                      e.key == 1 ? const EdgeInsets.symmetric(horizontal: 8) : EdgeInsets.zero,
-                  child: e.key == selectedIndex
-                      ? InkWell(
-                          onTap: () {
-                            ChangeIndex(e.key);
-                          },
-                          child: AllExpensiveItemActive(itemModel: e.value))
-                      : InkWell(
-                          onTap: () {
-                            ChangeIndex(e.key);
-                          },
-                          child: AllExpensiveItemInActive(itemModel: e.value)),
-                ),
+                child: e.key == selectedIndex
+                    ? InkWell(
+                        onTap: () {
+                          ChangeIndex(e.key);
+                        },
+                        child: AllExpensiveItemActive(itemModel: e.value))
+                    : InkWell(
+                        onTap: () {
+                          ChangeIndex(e.key);
+                        },
+                        child: AllExpensiveItemInActive(itemModel: e.value)),
               );
             }).toList()),
           ],

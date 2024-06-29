@@ -15,7 +15,7 @@ final String title;
           title,
           style: AppStyle.styleMedium16(context),
         ),
-        SizedBox(height: 12,),
+        const SizedBox(height: 12,),
         TextField(
           decoration: InputDecoration(
               hintStyle: AppStyle.styleRegular16(context),

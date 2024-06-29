@@ -5,7 +5,9 @@ import 'package:res_adap/views/admin_dashboard_view.dart';
 
 void main() {
   runApp(
-    const MyApp(), // Wrap your app
+    DevicePreview(
+      enabled:  true,
+        builder:(context)=> const MyApp()), // Wrap your app
 
   );
 }
@@ -16,8 +18,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-
+    return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: AdminDashBoardView(),
     );

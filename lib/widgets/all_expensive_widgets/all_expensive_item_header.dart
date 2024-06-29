@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AllExpensiveItemHeader extends StatelessWidget {
- const AllExpensiveItemHeader({super.key, required this.image,this.iconColor});
+  const AllExpensiveItemHeader(
+      {super.key, required this.image, this.iconColor});
 
   final String image;
   final Color? iconColor;
@@ -11,18 +12,26 @@ class AllExpensiveItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          padding: const EdgeInsets.all(14),
-          decoration: ShapeDecoration(
-            color: Colors.white.withOpacity(0.10000000149011612),
-            shape: const OvalBorder(),
-          ),
-          child: SvgPicture.asset(
-            image,
-            colorFilter:
-                ColorFilter.mode(iconColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                //  padding: const EdgeInsets.all(14),
+                decoration: ShapeDecoration(
+                  color: Colors.white.withOpacity(0.10000000149011612),
+                  shape: const OvalBorder(),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(
+                        iconColor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
         const Spacer(),
