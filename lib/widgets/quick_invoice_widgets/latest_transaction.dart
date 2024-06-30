@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:res_adap/generated/assets.dart';
 import 'package:res_adap/model/user_info_model.dart';
 import 'package:res_adap/utils/styles.dart';

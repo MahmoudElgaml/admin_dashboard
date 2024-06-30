@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:res_adap/utils/styles.dart';
 
 class ButtonSection extends StatelessWidget {
@@ -16,7 +14,7 @@ class ButtonSection extends StatelessWidget {
             child: Text(
               "Add more detail",
               style: AppStyle.styleSemiBold16(context).copyWith(
-                color: Color(0xff4EB7F2),
+                color: const Color(0xff4EB7F2),
               ),
             ),
           ),

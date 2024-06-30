@@ -9,7 +9,7 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CostumeContainer(
+    return const CostumeContainer(
       padding: 24,
       child: Column(
         children: [

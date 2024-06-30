@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:res_adap/model/card_model.dart';
 import 'package:res_adap/utils/styles.dart';
-import 'package:res_adap/widgets/custome_contanier.dart';
 import 'package:res_adap/widgets/mycard_body/card_pageview.dart';
-import 'package:res_adap/widgets/mycard_body/dot_indicator.dart';
 import 'package:res_adap/widgets/mycard_body/dotindicator_list.dart';
-import 'package:res_adap/widgets/mycard_body/the_card.dart';
 
 class MyCardBody extends StatefulWidget {
   const MyCardBody({super.key});
@@ -46,7 +42,7 @@ class _MyCardBodyState extends State<MyCardBody> {
           height: 20,
         ),
         CardPageView(pageController: pageController,),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         DotIndicatorList(currentIndex: currentIndex)
 
       ],

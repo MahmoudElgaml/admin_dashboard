@@ -7,7 +7,7 @@ import 'package:res_adap/widgets/custome_contanier.dart';
 import 'all_expensive_header.dart';
 
 class AllExpensiveBody extends StatefulWidget {
-  AllExpensiveBody({super.key});
+  const AllExpensiveBody({super.key});
 
   static const List<AllExpensiveItemModel> items = [
     AllExpensiveItemModel(
@@ -37,7 +37,7 @@ class _AllExpensiveBodyState extends State<AllExpensiveBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
       child: CostumeContainer(
         padding: 20,
         child: Column(

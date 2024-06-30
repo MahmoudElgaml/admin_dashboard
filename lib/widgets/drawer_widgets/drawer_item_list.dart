@@ -23,7 +23,7 @@ class _DrawerItemListState extends State<DrawerItemList> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemBuilder: (context, index) =>
           InkWell(
             onTap: () {
@@ -37,7 +37,7 @@ class _DrawerItemListState extends State<DrawerItemList> {
               isActive:selectedIndex==index,
             ),
           ),
-      shrinkWrap: true,
+
       itemCount: items.length,
     );
   }

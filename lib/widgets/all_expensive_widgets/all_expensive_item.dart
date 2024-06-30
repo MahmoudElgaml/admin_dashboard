@@ -25,12 +25,17 @@ class AllExpensiveItemInActive extends StatelessWidget {
             AllExpensiveItemHeader(
               image: itemModel.image,
             ),
+
+
             const SizedBox(
               height: 34,
             ),
-            Text(
-              itemModel.title,
-              style: AppStyle.styleSemiBold16(context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                itemModel.title,
+                style: AppStyle.styleSemiBold16(context),
+              ),
             ),
             const SizedBox(
               height: 8,
@@ -62,6 +67,8 @@ class AllExpensiveItemActive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
+
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         decoration: ShapeDecoration(
           color: const Color(0xFF4EB7F2),
@@ -80,9 +87,12 @@ class AllExpensiveItemActive extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Text(
-              itemModel.title,
-              style: AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                itemModel.title,
+                style: AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 8,

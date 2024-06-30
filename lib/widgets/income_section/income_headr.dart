@@ -28,10 +28,10 @@ class IncomeHeader extends StatelessWidget {
                 "Monthly",
                 style: AppStyle.styleMedium16(context),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
-              Icon(Icons.arrow_back_ios_new)
+              const Icon(Icons.arrow_back_ios_new)
             ],
           ),
         ),
