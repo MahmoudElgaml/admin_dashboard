@@ -13,28 +13,37 @@ class DrawerBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        children: [
-          UserInfo(
-            user: UserModel(
-                name: "Madrani Andi",
-                email: "Madraniadi20@gmail",
-                image: Assets.imagesAvatar2),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          DrawerItemList(),
-          Spacer(),
-          DrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesSetting, title: "Setting system"),
-          ),
-          DrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesLogout, title: "Logout account"),
-          ),
-        ],
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            UserInfo(
+              user: UserModel(
+                  name: "Madrani Andi",
+                  email: "Madraniadi20@gmail",
+                  image: Assets.imagesAvatar2),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            DrawerItemList(),
+            SizedBox(
+              height: 48,
+            ),
+            DrawerItem(
+              isActive: false,
+              drawerItemModel: DrawerItemModel(
+                  image: Assets.imagesSetting, title: "Setting system"),
+            ),
+            DrawerItem(
+              isActive: false,
+              drawerItemModel: DrawerItemModel(
+                  image: Assets.imagesLogout, title: "Logout account"),
+            ),
+            SizedBox(
+              height: 48,
+            )
+          ],
+        ),
       ),
     );
   }

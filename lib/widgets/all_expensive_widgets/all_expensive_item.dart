@@ -42,9 +42,12 @@ class AllExpensiveItemInActive extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            Text(
-              itemModel.price,
-              style: AppStyle.styleSemiBold24(context),
+            FittedBox(
+               fit: BoxFit.scaleDown,
+              child: Text(
+                itemModel.price,
+                style: AppStyle.styleSemiBold24(context),
+              ),
             ),
           ],
         ));
@@ -92,9 +95,12 @@ class AllExpensiveItemActive extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            Text(
-              itemModel.price,
-              style: AppStyle.styleSemiBold24(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                itemModel.price,
+                style: AppStyle.styleSemiBold24(context).copyWith(color: Colors.white),
+              ),
             ),
           ],
         ));

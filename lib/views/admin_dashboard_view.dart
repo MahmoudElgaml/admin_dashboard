@@ -19,12 +19,15 @@ class _AdminDashBoardViewState extends State<AdminDashBoardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? const Drawer(child: DrawerBody())
           : null,
       key: scaffoldKey,
       appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
+        elevation: 0,
+              backgroundColor: Colors.transparent,
               leading: IconButton(
                 onPressed: () {
                   scaffoldKey.currentState!.openDrawer();

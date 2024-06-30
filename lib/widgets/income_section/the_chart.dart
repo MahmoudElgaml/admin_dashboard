@@ -15,6 +15,7 @@ class _TheChartState extends State<TheChart> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment:  CrossAxisAlignment.center,
       children: [
         Expanded(
           child: AspectRatio(
@@ -28,6 +29,7 @@ class _TheChartState extends State<TheChart> {
           width: 20,
         ),
         const Expanded(
+          flex: 2,
           child: IncomeDetails(),
         )
       ],

@@ -96,9 +96,9 @@ class AppStyle {
     if (width <= SizeConfig.tablet) {
       return width / 800;
     } else if (width >= SizeConfig.desktop) {
-      return width / 1500;
+      return width / 1400;
     } else {
-      return width / 700;
+      return width / 400;
     }
   }
 
@@ -106,7 +106,7 @@ class AppStyle {
       {required double fontSize, required BuildContext context}) {
     double width = MediaQuery.sizeOf(context).width;
     double scalefactor = scaleFactor(width);
-    double lowerLimit = fontSize * .8;
+    double lowerLimit = fontSize * 0.9;
     double upperLimit = fontSize * 1.2;
 
     double responsiveFont = fontSize * scalefactor;
