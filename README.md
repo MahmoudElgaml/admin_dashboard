@@ -1,4 +1,4 @@
-# res_adap
+# Responsive and Adabtive AdminDahboard
 
 
 Our admin dashboard offers a responsive and adaptive UI, ensuring seamless performance across desktop, tablet, and mobile platforms
